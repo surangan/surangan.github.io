@@ -19,15 +19,17 @@ window.SITE = {
     area: { lon0: -14, lon1: 292, lat0: 62, lat1: -48 },
     areaMobile: { lon0: 62, lon1: 192, lat0: 46, lat1: -48 },
     places: {
-      cmb: { name: 'Colombo', note: 'home', lat: 6.93, lon: 79.85, side: -1, dy: -14 },
-      sg: { name: 'Singapore', note: 'now', lat: 1.35, lon: 103.82, side: 1, dy: 16, home: true },
+      cmb: { name: 'Colombo', note: 'Royal College', lat: 6.93, lon: 79.85, side: -1, dy: -14 },
+      sg: { name: 'Singapore', note: 'NUS · SUTD · now', lat: 1.35, lon: 103.82, side: 1, dy: 16, home: true },
+      bhm: { name: 'Birmingham', note: 'Exchange', lat: 52.49, lon: -1.89, side: 1, dy: -14 },
+      la: { name: 'Los Angeles', note: 'USC', lat: 34.05, lon: -118.24, side: -1, dy: 16 },
       bos: { name: 'Cambridge, MA', note: 'MIT Media Lab', lat: 42.36, lon: -71.09, side: -1, dy: -14 },
-      akl: { name: 'Auckland', note: 'ABI', lat: -36.85, lon: 174.76, side: -1, dy: -14 },
+      akl: { name: 'Auckland', note: 'Univ. of Auckland', lat: -36.85, lon: 174.76, side: -1, dy: -14 },
+      tyo: { name: 'Tokyo', note: 'Mercari', lat: 35.68, lon: 139.69, side: 1, dy: -14 },
     },
-    routes: [['cmb', 'sg'], ['sg', 'bos'], ['bos', 'sg'], ['sg', 'akl'], ['akl', 'sg'], ['sg', 'cmb', true]],
-    trips: [
-      { name: 'Birmingham', note: 'Exchange', lat: 52.49, lon: -1.89, from: 'sg', dy: -16 },
-      { name: 'Los Angeles', note: 'USC', lat: 34.05, lon: -118.24, from: 'sg', side: -1 },
-    ],
+    // In order: school in Colombo, NUS (exchange to Birmingham, attachment at USC),
+    // MIT Media Lab, SUTD and NUS in Singapore, Auckland, a remote fellowship with Mercari.
+    routes: [['cmb', 'sg'], ['sg', 'bhm'], ['bhm', 'sg'], ['sg', 'la'], ['la', 'sg'], ['sg', 'bos'], ['bos', 'sg'], ['sg', 'akl'], ['akl', 'tyo', true], ['akl', 'sg']],
+    trips: [],
   },
 };
